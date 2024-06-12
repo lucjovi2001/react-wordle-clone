@@ -1,0 +1,24 @@
+{
+    "solutions": [
+        {"word": "lucas", "id": 1},
+        {"word": "alexa", "id": 2},
+        {"word": "flour", "id": 3},
+        {"word": "drive", "id": 4},
+        {"word": "relax", "id": 5},
+        {"word": "times", "id": 6},
+        {"word": "train", "id": 7},
+        {"word": "cores", "id": 8},
+        {"word": "trail", "id": 9},
+        {"word": "blame", "id": 10},
+        {"word": "deter", "id": 11},
+        {"word": "organ", "id": 12},
+        {"word": "space", "id": 13},
+        {"word": "chart", "id": 14},
+        {"word": "start", "id": 15},
+        {"word": "chore", "id": 16},
+        {"word": "house", "id": 17},
+        {"word": "table", "id": 18},
+        {"word": "chair", "id": 19},
+        {"word": "spoon", "id": 20}
+    ]
+}
