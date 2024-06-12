@@ -9,7 +9,7 @@ const useWordle = (solution) => {
 
     // format guess into an array of letter objects
     const formatGuess = () => {
-
+        console.log('Formatting guess - ', currentGuess)
     }
 
     // add new guess to guesses state
@@ -22,6 +22,24 @@ const useWordle = (solution) => {
     // handle keyup event and track current guess
     // if user presses enter, add new guess
     const handleKeyup = ({ key }) => {
+        if (key === 'Enter') {
+            // only add guess if turn is less than 5
+            if (turn > 5) {
+                console.log('No guesses left')
+                return
+            }
+            // do not allow duplicate words
+            if (history.includes(currentGuess)) {
+                console.log('Already guessed')
+                return
+            }
+            // word must be 5 characters long
+            if (currentGuess.length !== 5) {
+                console.log('Word must only be 5 characters')
+                return
+            }
+            formatGuess() // call if all conditions are met
+        }
         if (key === 'Back') {
             setCurrentGuess((prev) => {
                 return prev.slice(0, -1)
