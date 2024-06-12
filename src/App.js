@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 function App() {
+
+  useEffect(() => {}, [])
+
   return (
     <div className="App">
       <h1>Wordle (Clone)</h1>
