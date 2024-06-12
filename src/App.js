@@ -1,12 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [solution, setSolution] = useState(null)
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    fetch('http://localhost:3001/solutions').then(res => res.json()).then(json => {
+      // random int between 0 and 19 (number of solutions in db.json)
+      const randomSolution = json[Math.floor(Math.random() * json.length)]
+      setSolution(randomSolution.word)
+    })
+  }, [setSolution])
 
   return (
     <div className="App">
       <h1>Wordle (Clone)</h1>
+      {solution && <div>Solution is: {solution}</div>}
     </div>
   );
 }
